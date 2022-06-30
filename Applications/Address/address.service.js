@@ -18,13 +18,20 @@ module.exports = {
 
             /** Filtering */
             let address = get_address.data
+            let data = []
             Object.keys(address).map((i) => {
                 if(Array.isArray(address[i])){
-                    result = address[i].filter((value) => {
+                    let add = address[i].filter((value) => {
                         return value.id === id
                     })
+
+                    if(add.length > 0){
+                        add.map((i) => data.push(i))
+                    } 
                 }
             })
+
+            result = data
 
         } catch (error) {
             result = null
