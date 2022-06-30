@@ -21,7 +21,7 @@
 > npm start
 ```
 
-### Step by step POSTMAN Collection
+### Register in postman collection
 
 ```sh
 # Register user
